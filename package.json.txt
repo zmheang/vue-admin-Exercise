@@ -1,0 +1,6 @@
+https://www.cnblogs.com/tzyy/p/5193811.html#_h1_0
+name: 模块名称
+version:
+description: 一个描述，方便别人了解你的模块的作用，搜索的时候也有用
+keywords: 一个字符串数组，方便别人搜索到本模块
+homepage: 项目主页url
