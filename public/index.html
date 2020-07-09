@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+lang:规定元素内容的语言
+-->
+<html lang="en">
+  <head>
+      <!--
+      <meta> 元素可提供有关页面的元信息（meta-information），比如针对搜索引擎和更新频度的描述和关键词
+      <meta> 标签永远位于 head 元素内部
+      元数据总是以名称/值的形式被成对传递的。
+
+      -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= VUE_APP_TITLE %></title>
+    <meta name="keywords" content="vue admin,vue-admin,vue-admin-beautiful" />
+    <meta
+            name="description"
+            content="<%= VUE_APP_TITLE %>基于vue-admin-beautiful构建,作者：<%= VUE_APP_AUTHOR %>"
+    />
+    <meta name="author" content="<%= VUE_APP_AUTHOR %>" />
+    <link rel="stylesheet" href="<%= BASE_URL %>static/loading.css" />
+  </head>
+  <body>
+    <!--
+    如果浏览器支持脚本，那么它不会显示出 noscript 元素中的文本。
+    无法识别 <script> 标签的浏览器会把标签的内容显示到页面上
+    -->
+    <noscript>
+      非常抱歉鉴于安全考量,您无法查看<%= VUE_APP_TITLE %>
+      源代码，该系统基于vue-admin-beautiful-copy开发
+    </noscript>
+    <div id="vue-admin-beautiful">
+      <div class="first-loading-wrp">
+        <div class="loading-wrp">
+          <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+        </div>
+        <h1><%= VUE_APP_TITLE %></h1>
+      </div>
+    </div>
+    <script>
+      /^http(s*):\/\//.test(location.href) ||
+      alert("基于vue-admin-beautiful开发的项目需要部署到服务器下访问");
+    </script>
+  </body>
+</html>
