@@ -25,5 +25,35 @@ export default [
         data:{ accessToken }
       }
     }
-  }
+  },
+  {
+    url: "/user/info",
+    type: "post",
+    response: (config) => {
+      const { accessToken } = config.body;
+      let permissions = ["admin"];
+      let userName = "admin";
+      if ("admin-accessToken" === accessToken) {
+        permissions = ["admin"];
+        userName = "admin";
+      }
+      if ("editor-accessToken" === accessToken) {
+        permissions = ["editor"];
+        userName = "editor";
+      }
+      if ("test-accessToken" === accessToken) {
+        permissions = ["admin", "editor"];
+        userName = "test";
+      }
+      return {
+        code: 200,
+        msg: "success",
+        data: {
+          permissions,
+          userName,
+          avatar: handleRandomImage(50, 50),
+        },
+      };
+    },
+  },
 ]

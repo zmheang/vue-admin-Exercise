@@ -25,6 +25,8 @@ module.exports = {
   contentType: "application/json;charset=UTF-8",
   //消息框消失时间
   messageDuration: 3000,
+  //是否开启登录拦截
+  loginInterception: true,
   //最长请求时间
   requestTimeout: 5000,
   //操作正常code
@@ -33,16 +35,34 @@ module.exports = {
   invalidCode: 402,
   //无权限code
   noPermissionCode: 401,
+  //不经过token校验的路由
+  routesWhiteList: ["/login", "/404", "/401"],
   //需要加loading层的请求，防止重复提交
   debounce: ["doEdit"],
   //token名称
   tokenName: "accessToken",
   //是否开启登录RSA加密
   loginRSA: false,
+  //是否显示顶部进度条
+  progressBar: true,
   //token存储位置localStorage sessionStorage cookie
   //区别：存储在 localStorage 的数据可以长期保留；而当页面会话结束——也就是说，当页面被关闭时，存储在 sessionStorage 的数据会被清除；cookie也是会话级别，信息保存在客户端
   storage: "localStorage",//token在localStorage、sessionStorage、cookie存储的key的名称
   tokenTableName: "vue-admin-beautiful-copy",
+  //是否显示多标签页
+  tagsBar: true,
+  //是否显示logo
+  logo: true,
+  //横纵布局 horizontal vertical
+  layout: "vertical",
+  //是否国定头部 固定fixed 不固定noFixed
+  header: "fixed",
+  //是否开启主题配置按钮
+  themeBar: true,//是否显示骨架屏
+  skeleton: true,
+
+
+
 
 
 }

@@ -3,7 +3,9 @@
 import Vue from "vue";
 import "./element";
 import "./vabIcon";
+import "@/remixIcon";
 import "@/styles/vab.scss";
+import "@/config/permission";
 import vab from "@/utils/vab";
 
 Vue.use(vab);

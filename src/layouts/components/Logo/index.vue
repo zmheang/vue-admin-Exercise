@@ -14,6 +14,7 @@
 </template>
 <script>
 import { mapGetters } from "vuex";
+// eslint-disable-next-line no-unused-vars
 import { logo } from "@/config/settings";
 export default {
   name: "Logo",
